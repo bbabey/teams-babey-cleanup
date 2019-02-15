@@ -1,6 +1,4 @@
-/* ########### Left Channel/Chat List */
-
-/* ----------- channel list */
+/* ########### LEFT LIST SIDEBAR GENERAL ##########  */
 
 /* rules here are "standard" desktop and also override the 1350+px breakpoint due to specificity */
 @media (min-width:965px) {
@@ -19,10 +17,12 @@
 }
 
 
+
+
+/* ########### LEFT LIST SIDEBAR (Teams Pane) ####### */
+
 /* channel list top header */
 .ts-channel-list .ts-tree-header {margin-top:0;}
-
-
 
 /* per-team wrapper */
 .ts-channel-list .team.match-parent {margin-bottom:0;border-top:1px solid rgba(128,128,128,0.2);}
@@ -82,7 +82,7 @@
 
 
 
-/* ----------- chat list */
+/* ########### LEFT LIST SIDEBAR (Chat Pane) ####### */
 
 /* chat list vertical item spacing */
 .chat-list .recipient-group-list-item {height:auto;}
@@ -96,6 +96,7 @@
 .chat-list .cle-timestamp {margin:0;}
 .chat-list .cle-preview {display:none;}
 .chat-list .cle-action {grid-row:auto;height:2.2rem;width:2.2rem;margin-bottom:0;}
+.chat-list .cle-action .app-svg {width:2.2rem;height:2.2rem;}
 
 /* chat list unread indicator */
 .chat-list .left-rail-unread::before {width:1rem;height:1rem;top:0.83rem;background:#e97548;}
@@ -117,10 +118,9 @@
 
 
 
+/* ########### MAIN CONTENT VIEWPORT (Chat Pane) ########## */
 
-/* ########### Right content viewport (message list etc.) */
-
-/* message list viewport */
+/* ensure message content spans full width of viewport */
 .ts-message-list-container {max-width:none;}
 virtual-repeat > .list-wrap > .item-wrap {max-width:none;}
 .ts-add-message .ts-new-message {max-width:none;}
@@ -139,7 +139,7 @@ virtual-repeat > .list-wrap > .item-wrap {max-width:none;}
 .chat-style .ts-message-thread-body .message-body .timestamp-column {font-size:1.2rem;opacity:0.75;}
 
 
-/* ===== begin per-message spacing */
+/* ---- BEGIN per-message spacing-ish ------ */
 
 /* strip background bubbles */
 .chat-style .message-body {background-color:transparent;}
@@ -163,10 +163,11 @@ virtual-repeat > .list-wrap > .item-wrap {max-width:none;}
 /* right-side "actions" per message (like, etc) */
 .chat-style thread .ts-message .message-actions-container {top:0;opacity:0.75;transform-origin:100% 0;transform:scale(0.80);}
 
-/* ===== end  per-message spacing */
+/* ---- END per-message spacing-ish ------ */
 
 
-/* message text input box */
+
+/* footer input box for chats */
 .ts-add-message {padding:1.8rem 0 0 0;margin:0;}
 .ts-add-message .ts-new-message-footer {padding:0;}
 .ts-add-message .ts-border-newcompose:not(.ts-new-message-expand) .ts-new-message-footer {min-height:3.5rem;}
