@@ -92,6 +92,35 @@
 .message-list-common:not(.chat-style) virtual-repeat > .list-wrap > .item-wrap,
 .ts-add-message.is-not-chat .ts-new-message {max-width:none;}
 
+/* normalize "date dividers" (previously used negative margins) */
+.message-list-common:not(.chat-style) .message-list-divider.date-separator {height:auto;margin-top:0;}
+
+/* shrink vertical space around each thread */
+.message-list-common:not(.chat-style) thread .ts-message {padding-top:.2rem;padding-bottom:.2rem;}
+
+/* adjust thread shadow to fit new spacing */
+.message-list-common:not(.chat-style) thread .ts-message::before {top:.2rem;bottom:.2rem;box-shadow:0 0 .4rem -0.1rem rgba(128,128,128,0.4);}
+
+/* per-thread "reply section" spacing shrinkage */
+.message-list-common:not(.chat-style) .thread-action-reply-message {margin-bottom:0;}
+.message-list-common:not(.chat-style) .ts-reply-message .icons-reply.ts-sym {height:auto;}
+
+/* relocate reply button for threads with no replies */
+.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message {visibility:hidden;width:auto;padding-left:0;position:absolute;bottom:-1.4rem;left:6.8rem;}
+.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible):hover .thread-action-reply-message {visibility:visible;}
+.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym {height:2.2rem;padding:0 1rem 0 0;border:1px solid rgba(128,128,128,0.20);border-radius:.3rem;}
+.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym svg {width:2.2rem;height:2.2rem;}
+.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym span {display:none;}
+.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym::after {content:"Reply (Start Thread)";display:inline-block;position:relative;top:-.7rem;}
+
+/* allow display overflow items to show when we mouseover a thread with no replies */
+.message-list-common:not(.chat-style) .ts-message-list-item:hover {overflow:visible;z-index:100;}
+
+
+
+
+
+
 
 
 /* ########### LEFT LIST SIDEBAR (Chat Pane) ####### */
