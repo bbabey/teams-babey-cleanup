@@ -107,11 +107,13 @@
 
 /* relocate reply button for threads with no replies */
 .message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message {visibility:hidden;width:auto;padding-left:0;position:absolute;bottom:-1.4rem;left:6.8rem;}
-.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible):hover .thread-action-reply-message {visibility:visible;}
-.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym {height:2.2rem;padding:0 1rem 0 0;border:1px solid rgba(128,128,128,0.20);border-radius:.3rem;}
+.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym {height:2.2rem;padding:0 1rem 0 0;border:1px solid rgba(128,128,128,0.20);border-radius:.3rem;cursor:pointer;}
 .message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym svg {width:2.2rem;height:2.2rem;}
 .message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym span {display:none;}
-.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym::after {content:"Reply (Start Thread)";display:inline-block;position:relative;top:-.7rem;}
+.message-list-common:not(.chat-style) .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message .icons-reply.ts-sym::after {content:"Reply (Start Thread)";display:inline-block;position:relative;top:-.7rem;cursor:pointer;}
+
+/* show hidden reply button when we hover =) */
+.message-list-common:not(.chat-style) .ts-message-list-item:hover .ts-message:not(.has-replies):not(.reply-is-visible) .thread-action-reply-message {visibility:visible;}
 
 /* allow display overflow items to show when we mouseover a thread with no replies */
 .message-list-common:not(.chat-style) .ts-message-list-item:hover {overflow:visible;z-index:100;}
