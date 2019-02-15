@@ -21,9 +21,9 @@
 .ts-channel-list .team.match-parent .team .channels {position:relative;}
 
 /* per-team header */
-.channel-list-team-header {height:2.6rem;padding-top:0;padding-bottom:0;}
-.channel-list-team-header a {height:auto;}
-.channel-list-team-header .team-icon {height:2.2rem;width:2.2rem;border-radius:0;}
+.ts-channel-list .channel-list-team-header {height:2.6rem;padding-top:0;padding-bottom:0;}
+.ts-channel-list .channel-list-team-header a {height:auto;}
+.ts-channel-list .channel-list-team-header .team-icon {display:none;height:2.2rem;width:2.2rem;border-radius:0;}
 
 /* per-team header expander/collapser arrow */
 .channel-list-team-header .expand-collapse-icon-teams {width:2.2rem;height:2.2rem;padding-top:0;padding-bottom:0;left:0;top:0.2rem;opacity:1.0;}
