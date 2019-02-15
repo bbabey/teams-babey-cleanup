@@ -1,115 +1,121 @@
-@-moz-document domain(teams.microsoft.com) {
+/* ########### Left Channel/Chat List */
 
-  /* ########### Left Channel/Chat List */
+/* ----------- channel list */
 
-  /* ----------- channel list */
+/* channel list top header */
+.ts-channel-list .ts-tree-header {margin-top:0;}
 
-  /* general svg icon sizing down */
-  .ts-channel-list .app-svg {width:2.2rem;height:2.2rem;}
+/* per-team wrapper */
+.ts-channel-list .team.match-parent {margin-bottom:0;}
 
-  /* channel list top header */
-  .ts-channel-list .ts-tree-header {margin-top:0;}
+/* per-team header */
+.channel-list-team-header {height:2.6rem;padding-top:0;padding-bottom:0;}
+.channel-list-team-header a {height:auto;}
+.channel-list-team-header .team-icon {height:2.2rem;width:2.2rem;border-radius:0;}
 
-  /* repeated "more actions" collapser */
-  .ts-channel-list .channels .icons-more {height:2.2rem;}
+/* per-team header expander/collapser arrow */
+.channel-list-team-header .expand-collapse-icon-teams {width:2.2rem;height:2.2rem;padding-top:0;padding-bottom:0;left:0;top:0.2rem;opacity:1.0;}
+.channel-list-team-header .expand-collapse-icon-teams .app-svg {width:2.2rem;height:2.2rem;}
 
-  /* channel list team wrapper */
-  .ts-channel-list .team.match-parent {margin-bottom:0;}
+/* per-team "more actions" collapsed icon */
+.channel-list-team-header .icons-more {height:2.2rem;}
+.channel-list-team-header .icons-more .app-svg {width:2.2rem;height:2.2rem;}
 
-  /* channel list team header */
-  .channel-list-team-header {height:auto;}
-  .channel-list-team-header .expand-collapse-icon-teams {padding:0;left:0;}
-  .channel-list-team-header a {height:auto;padding-top:0;padding-bottom:0;}
-  .channel-list-team-header .team-icon {height:2.2rem;width:2.2rem;border-radius:0;}
+/* per-channel "more actions" collapsed icon */
+.ts-channel-list a {height:2.6rem;padding-top:.2rem;padding-bottom:.2rem;}
+.ts-channel-list .channels .icons-more {height:2.2rem;}
+.ts-channel-list .channels .icons-more .app-svg {width:2.2rem;height:2.2rem;}
 
-  /* channel list bottom actions bar */
-  .ts-channel-list:not(.popover)>.simple-scrollbar {height:calc(100vh - 9.6rem);margin-bottom:3.6rem;}
-  .ts-channel-list .team-operations-container {padding-top:0.2rem;padding-bottom:0.2rem;}
-
-
-  /* ----------- chat list */
-
-  /* chat list vertical item spacing */
-  .chat-list .recipient-group-list-item {height:auto;}
-  .chat-list .recipient-group-list-item a {height:auto;}
-  .chat-list .recipient-group-list-item a.cle-item {grid-template-rows:2.6rem auto;}
-  .chat-list .recipient-group-list-item:hover .cle-action {margin-bottom:0;}
-  .chat-list .left-rail-item-hover.menu-open {height:auto;}
-
-  /* chat list basic content */
-  .chat-list .cle-title {margin:0;}
-  .chat-list .cle-timestamp {margin:0;}
-  .chat-list .cle-preview {display:none;}
-  .chat-list .cle-action {grid-row:auto;}
-
-  /* chat list avatar/status icons */
-  .chat-list .cle-avatar {height:2.6rem;}
-  .chat-list .cle-avatar .profile-img-parent {display:none;}
-  .chat-list .cle-avatar .ts-skype-status {width:100%;top:.3rem;text-align:center;}
-
-  .chat-list .group-chat-icon,
-  .chat-list .meeting-chat-icon,
-  .chat-list .mute-chat-icon,
-  .chat-list .new-chat-icon {width:2.2rem;height:2.2rem;top:.2rem;}
-
-  .chat-list .group-chat-icon .app-svg,
-  .chat-list .meeting-chat-icon .app-svg,
-  .chat-list .mute-chat-icon .app-svg,
-  .chat-list .new-chat-icon .app-svg {width:2.2rem;height:2.2rem;}
+/* channel list bottom actions bar */
+.ts-channel-list:not(.popover)>.simple-scrollbar {height:calc(100vh - 9.6rem);margin-bottom:3.6rem;}
+.ts-channel-list .team-operations-container {padding-top:0.2rem;padding-bottom:0.2rem;}
 
 
+/* ----------- chat list */
+
+/* chat list vertical item spacing */
+.chat-list .recipient-group-list-item {height:auto;}
+.chat-list .recipient-group-list-item a {height:auto;}
+.chat-list .recipient-group-list-item a.cle-item {grid-template-rows:2.6rem auto;}
+.chat-list .recipient-group-list-item:hover .cle-action {margin-bottom:0;}
+.chat-list .left-rail-item-hover.menu-open {height:auto;}
+
+/* chat list basic content */
+.chat-list .cle-title {margin:0;}
+.chat-list .cle-timestamp {margin:0;}
+.chat-list .cle-preview {display:none;}
+.chat-list .cle-action {grid-row:auto;height:2.2rem;width:2.2rem;margin-bottom:0;}
+
+/* chat list unread indicator */
+.chat-list .left-rail-unread::before {width:1rem;height:1rem;top:0.83rem;background:#e97548;}
+
+/* chat list avatar/status icons */
+.chat-list .cle-avatar {height:2.6rem;}
+.chat-list .cle-avatar .profile-img-parent {display:none;}
+.chat-list .cle-avatar .ts-skype-status {width:100%;top:.3rem;text-align:center;}
+
+.chat-list .group-chat-icon,
+.chat-list .meeting-chat-icon,
+.chat-list .mute-chat-icon,
+.chat-list .new-chat-icon {width:2.2rem;height:2.2rem;top:.2rem;}
+
+.chat-list .group-chat-icon .app-svg,
+.chat-list .meeting-chat-icon .app-svg,
+.chat-list .mute-chat-icon .app-svg,
+.chat-list .new-chat-icon .app-svg {width:2.2rem;height:2.2rem;}
 
 
-  /* ########### Right content viewport (message list etc.) */
-
-  /* message list viewport */
-  .ts-message-list-container {max-width:none;}
-  virtual-repeat > .list-wrap > .item-wrap {max-width:none;}
-  .ts-add-message .ts-new-message {max-width:none;}
-
-  /* align self-chats to the left */
-  .chat-style .self .ts-message-thread-body {padding-left:4.2rem;justify-content:normal;}
-  .chat-style tombstone .self {justify-content:normal;}
-
-  /* "other person" icon next to messages */
-  .thread-body > .media-left {padding-top:.2rem;padding-bottom:0;}
-  .ts-message .thread-body-status > .ts-skype-status {top:1.9rem;}
-
-  /* message sender / datestamp row */
-  .ts-message-thread-body .message-body-top-row {padding-bottom:0.2rem;}
-  .chat-style .self .ts-msg-name {display:block;margin-right:1rem;}
-  .ts-message-thread-body .message-body .ts-msg-name {font-size:1.2rem;font-weight:700;}
-  .ts-message-thread-body .message-body .timestamp-column {font-size:1.2rem;opacity:0.75;}
 
 
-  /* ===== begin per-message spacing */
+/* ########### Right content viewport (message list etc.) */
 
-  /* strip background bubbles */
-  .chat-style .message-body {background-color:transparent;}
-  .chat-style .self .message-body {background-color:transparent;}
+/* message list viewport */
+.ts-message-list-container {max-width:none;}
+virtual-repeat > .list-wrap > .item-wrap {max-width:none;}
+.ts-add-message .ts-new-message {max-width:none;}
 
+/* align self-chats to the left */
+.chat-style .self .ts-message-thread-body {padding-left:4.2rem;justify-content:normal;}
+.chat-style tombstone .self {justify-content:normal;}
 
-  /* padding above message where sender is different than previous message */
-  .chat-style thread .ts-message {padding-top:.4rem;margin-top:.4rem;border-top:1px solid rgba(128,128,128,0.20);}
+/* "other person" icon next to messages */
+.chat-style .thread-body > .media-left {padding-top:.2rem;padding-bottom:0;}
+.chat-style .ts-message .thread-body-status > .ts-skype-status {top:1.9rem;}
 
-  /* padding above message where sender is same as previous */
-  .chat-style thread .ts-message.conversation-bubble {padding-top:0;margin-top:0;border-top:0px;}
-
-  /* message content */
-  .ts-message-thread-body .message-body {padding:.0rem 0;}
-  .message-body-container {margin-bottom:0;}
-  thread .ts-message .merge-bubble .message-actions-container {top:0;}
-
-  /* right-side "actions" per message (like, etc) */
-  thread .ts-message .message-actions-container {top:0;opacity:0.75;}
-
-  /* ===== end  per-message spacing */
+/* message sender / datestamp formatting */
+.chat-style .self .ts-msg-name {display:block;margin-right:1rem;}
+.chat-style .ts-message-thread-body .message-body .ts-msg-name {font-size:1.2rem;font-weight:700;}
+.chat-style .ts-message-thread-body .message-body .timestamp-column {font-size:1.2rem;opacity:0.75;}
 
 
-  /* message text input box */
-  .ts-add-message {padding:0.4rem 0 0 0;margin:0;}
-  .ts-add-message .ts-new-message-footer {padding:0;}
-  .ts-add-message .ts-border-newcompose:not(.ts-new-message-expand) .ts-new-message-footer {min-height:3.5rem;}
+/* ===== begin per-message spacing */
+
+/* strip background bubbles */
+.chat-style .message-body {background-color:transparent;}
+.chat-style .self .message-body {background-color:transparent;}
+
+/* first row of message */
+.chat-style .ts-message-thread-body .message-body-top-row {padding-top:0.4rem;padding-bottom:0.4rem;}
+.chat-style .merge-bubble .ts-message-thread-body .message-body-top-row {padding:0;}
+
+/* padding above message where sender is different than previous message */
+.chat-style thread .ts-message {padding-top:.4rem;margin-top:.4rem;border-top:1px solid rgba(128,128,128,0.20);}
+
+/* padding above message where sender is same as previous */
+.chat-style thread .ts-message.conversation-bubble {padding-top:.2rem;margin-top:0;border-top:0px;}
+
+/* message content */
+.chat-style .ts-message-thread-body .message-body {padding:0 0 0.2rem 0;}
+.chat-style .message-body-container {margin-bottom:0;}
+.chat-style thread .ts-message .merge-bubble .message-actions-container {top:0;}
+
+/* right-side "actions" per message (like, etc) */
+.chat-style thread .ts-message .message-actions-container {top:0;opacity:0.75;transform-origin:100% 0;transform:scale(0.80);}
+
+/* ===== end  per-message spacing */
 
 
-}
+/* message text input box */
+.ts-add-message {padding:1.8rem 0 0 0;margin:0;}
+.ts-add-message .ts-new-message-footer {padding:0;}
+.ts-add-message .ts-border-newcompose:not(.ts-new-message-expand) .ts-new-message-footer {min-height:3.5rem;}
