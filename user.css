@@ -70,6 +70,10 @@
 .ts-channel-list .show-fav-icon {margin:0;width:2.2rem;height:2.2rem;}
 .ts-channel-list .show-fav-icon .app-svg {width:2.2rem;height:2.2rem;}
 
+/* per-channel "important" icon */
+.ts-channel-list .important-icon {margin:0;width:2.2rem;height:2.2rem;}
+.ts-channel-list .important-icon .app-svg {width:2.2rem;height:2.2rem;}
+
 /* per-channel "more channels" row */
 .ts-channel-list .open-channel-mgr .channel-list-show-icon-on-hover {width:2.2rem;height:2.2rem;}
 .ts-channel-list .open-channel-mgr .channel-list-show-icon-on-hover .app-svg {width:2.2rem;height:2.2rem;top:.2rem;}
@@ -79,6 +83,14 @@
 .ts-channel-list:not(.popover)>.simple-scrollbar {height:calc(100vh - 9.6rem);margin-bottom:3.6rem;}
 .ts-channel-list .team-operations-container {padding-top:0.2rem;padding-bottom:0.2rem;}
 
+
+
+/* ########### MAIN CONTENT VIEWPORT (Teams Pane) ########## */
+
+/* ensure messages/input span full width of viewport */
+.message-list-common:not(.chat-style) .ts-message-list-container,
+.message-list-common:not(.chat-style) virtual-repeat > .list-wrap > .item-wrap,
+.ts-add-message.is-not-chat .ts-new-message {max-width:none;}
 
 
 
@@ -121,8 +133,8 @@
 /* ########### MAIN CONTENT VIEWPORT (Chat Pane) ########## */
 
 /* ensure message content spans full width of viewport */
-.ts-message-list-container {max-width:none;}
-virtual-repeat > .list-wrap > .item-wrap {max-width:none;}
+.chat-style .ts-message-list-container,
+.chat-style virtual-repeat > .list-wrap > .item-wrap,
 .ts-add-message .ts-new-message {max-width:none;}
 
 /* align self-chats to the left */
@@ -133,10 +145,6 @@ virtual-repeat > .list-wrap > .item-wrap {max-width:none;}
 .chat-style .thread-body > .media-left {padding-top:.2rem;padding-bottom:0;}
 .chat-style .ts-message .thread-body-status > .ts-skype-status {top:1.9rem;}
 
-/* message sender / datestamp formatting */
-.chat-style .self .ts-msg-name {display:block;margin-right:1rem;}
-.chat-style .ts-message-thread-body .message-body .ts-msg-name {font-size:1.2rem;font-weight:700;}
-.chat-style .ts-message-thread-body .message-body .timestamp-column {font-size:1.2rem;opacity:0.75;}
 
 
 /* ---- BEGIN per-message spacing-ish ------ */
@@ -145,15 +153,20 @@ virtual-repeat > .list-wrap > .item-wrap {max-width:none;}
 .chat-style .message-body {background-color:transparent;}
 .chat-style .self .message-body {background-color:transparent;}
 
-/* first row of message */
-.chat-style .ts-message-thread-body .message-body-top-row {padding-top:0.4rem;padding-bottom:0.4rem;}
-.chat-style .merge-bubble .ts-message-thread-body .message-body-top-row {padding:0;}
-
 /* padding above message where sender is different than previous message */
 .chat-style thread .ts-message {padding-top:.4rem;margin-top:.4rem;border-top:1px solid rgba(128,128,128,0.20);}
 
 /* padding above message where sender is same as previous */
 .chat-style thread .ts-message.conversation-bubble {padding-top:.2rem;margin-top:0;border-top:0px;}
+
+/* first row of message */
+.chat-style .ts-message-thread-body .message-body-top-row {padding-top:0.4rem;padding-bottom:0.4rem;}
+.chat-style .merge-bubble .ts-message-thread-body .message-body-top-row {padding:0;}
+
+/* message sender / datestamp formatting */
+.chat-style .self .ts-msg-name {display:block;margin-right:1rem;}
+.chat-style .ts-message-thread-body .message-body .ts-msg-name {font-size:1.2rem;font-weight:700;}
+.chat-style .ts-message-thread-body .message-body .timestamp-column {font-size:1.2rem;opacity:0.75;}
 
 /* message content */
 .chat-style .ts-message-thread-body .message-body {padding:0 0 0.2rem 0;}
