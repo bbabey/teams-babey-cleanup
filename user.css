@@ -2,45 +2,84 @@
 
 /* ----------- channel list */
 
-/* default left rail to full-width at all times, using same value as 1350+px breakpoint */
-.app-rail-common>div,
-.fullscreen-layout .ts-left-rail-wrapper,
-.left-rail-item,
-.ts-left-rail-wrapper {width:32rem;}
+/* rules here are "standard" desktop and also override the 1350+px breakpoint due to specificity */
+@media (min-width:965px) {
+    /* left rail should always be "full" width */
+    .app-left-rail-width,
+    .app-rail-common>div,
+    .fullscreen-layout .ts-left-rail-wrapper,
+    .left-rail-item,
+    .ts-left-rail-wrapper {width:32rem;}
+    
+    /* adjust team "more actions" popup to display over the artificial first column */
+    .popover.leftrail-override-position[tam-team-id] {left:17.2rem!important;}
+
+    /* adjust channel "more actions" popup to account for wide mode */
+    .popover.leftrail-override-position {left:34.4rem!important;}
+}
 
 
 /* channel list top header */
 .ts-channel-list .ts-tree-header {margin-top:0;}
 
+
+
 /* per-team wrapper */
 .ts-channel-list .team.match-parent {margin-bottom:0;border-top:1px solid rgba(128,128,128,0.2);}
 
 /* per-team grid arrangement */
-.ts-channel-list .team.match-parent .team {width:100%;position:relative;min-height:2.6rem;padding-left:50%;}
-.ts-channel-list .team.match-parent .team .channel-list-team-header {position:absolute;width:50%;left:0;top:0;}
+.ts-channel-list .team.match-parent .team {width:100%;position:relative;min-height:2.4rem;padding-left:45%;}
+.ts-channel-list .team.match-parent .team .channel-list-team-header {position:absolute;width:45%;left:0;top:0;}
 .ts-channel-list .team.match-parent .team .channels {position:relative;}
 
 /* per-team header */
-.ts-channel-list .channel-list-team-header {height:2.6rem;padding-top:0;padding-bottom:0;}
-.ts-channel-list .channel-list-team-header a {height:auto;}
+.ts-channel-list .channel-list-team-header {height:auto;padding-top:0;padding-bottom:0;}
+.ts-channel-list .channel-list-team-header > a {height:auto;padding-top:0.2rem;padding-bottom:0.2rem;padding-left:0.8rem;padding-right:0.2rem!important;}
 .ts-channel-list .channel-list-team-header .team-icon {display:none;height:2.2rem;width:2.2rem;border-radius:0;}
+.ts-channel-list .channel-list-team-header .header-text.truncate {padding-right:0;margin-top:0;font-size:1.1rem;line-height:2.0rem;}
+.ts-channel-list .channel-list-team-header:hover .header-text.truncate {padding-right:2.2rem;}
 
 /* per-team header expander/collapser arrow */
-.channel-list-team-header .expand-collapse-icon-teams {width:2.2rem;height:2.2rem;padding-top:0;padding-bottom:0;left:0;top:0.2rem;opacity:1.0;}
+.channel-list-team-header .expand-collapse-icon-teams {display:none;width:2.2rem;height:2.2rem;padding-top:0;padding-bottom:0;left:0;top:0.2rem;opacity:1.0;}
 .channel-list-team-header .expand-collapse-icon-teams .app-svg {width:2.2rem;height:2.2rem;}
 
 /* per-team "more actions" collapsed icon */
-.channel-list-team-header .icons-more {height:2.2rem;}
+.channel-list-team-header .icons-more {width:2.2rem;height:2.2rem;position:absolute;top:.2rem;right:.2rem;}
 .channel-list-team-header .icons-more .app-svg {width:2.2rem;height:2.2rem;}
 
+/* per-team "more actions" ellipsis hover toggler */
+.channel-list-team-header .team-more-btn.icons-more {display:none;}
+.channel-list-team-header:hover .team-more-btn.icons-more {display:block;}
+
+
+
+/* per-channel item */
+.ts-channel-list a.channel-anchor {height:2.4rem;padding-top:.2rem;padding-bottom:.2rem;padding-left:.4rem;padding-right:1.2rem;font-size:1.4rem;line-height:2.0rem;}
+.ts-channel-list a.channel-anchor .name-channel-type .truncate {padding-right:0;}
+.ts-channel-list a.channel-anchor:hover .name-channel-type .truncate {padding-right:2.2rem;}
+
 /* per-channel "more actions" collapsed icon */
-.ts-channel-list a {height:2.6rem;padding-top:.2rem;padding-bottom:.2rem;}
-.ts-channel-list .channels .icons-more {height:2.2rem;}
+.ts-channel-list .channels .icons-more {width:2.2rem;height:2.2rem;position:absolute;top:.2rem;right:1.2rem;}
 .ts-channel-list .channels .icons-more .app-svg {width:2.2rem;height:2.2rem;}
+
+/* per-channel "more actions" ellipsis hover toggler */
+.ts-channel-list a.channel-anchor .icons-more {display:none;}
+.ts-channel-list a.channel-anchor:hover .icons-more {display:block;}
+
+/* per-channel "favorite" icon */
+.ts-channel-list .show-fav-icon {margin:0;width:2.2rem;height:2.2rem;}
+.ts-channel-list .show-fav-icon .app-svg {width:2.2rem;height:2.2rem;}
+
+/* per-channel "more channels" row */
+.ts-channel-list .open-channel-mgr .channel-list-show-icon-on-hover {width:2.2rem;height:2.2rem;}
+.ts-channel-list .open-channel-mgr .channel-list-show-icon-on-hover .app-svg {width:2.2rem;height:2.2rem;top:.2rem;}
+
 
 /* channel list bottom actions bar */
 .ts-channel-list:not(.popover)>.simple-scrollbar {height:calc(100vh - 9.6rem);margin-bottom:3.6rem;}
 .ts-channel-list .team-operations-container {padding-top:0.2rem;padding-bottom:0.2rem;}
+
+
 
 
 /* ----------- chat list */
