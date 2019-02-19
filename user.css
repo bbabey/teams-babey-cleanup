@@ -131,7 +131,7 @@
 .chat-list .recipient-group-list-item {height:auto;}
 .chat-list .recipient-group-list-item a {height:auto;}
 .chat-list .recipient-group-list-item a.cle-item {grid-template-rows:2.6rem auto;}
-.chat-list .recipient-group-list-item:hover .cle-action {margin-bottom:0;}
+.chat-list .recipient-group-list-item:hover .cle-action {margin-bottom:0;grid-row:1;grid-column:6;}
 .chat-list .left-rail-item-hover.menu-open {height:auto;}
 
 /* chat list basic content */
@@ -145,7 +145,7 @@
 .chat-list .left-rail-unread::before {width:1rem;height:1rem;top:0.83rem;background:#e97548;}
 
 /* chat list avatar/status icons */
-.chat-list .cle-avatar {height:2.6rem;}
+.chat-list .cle-avatar {width:2.6rem;height:2.6rem;}
 .chat-list .cle-avatar .profile-img-parent {display:none;}
 .chat-list .cle-avatar .ts-skype-status {width:100%;top:.3rem;text-align:center;}
 
@@ -159,6 +159,9 @@
 .chat-list .mute-chat-icon .app-svg,
 .chat-list .new-chat-icon .app-svg {width:2.2rem;height:2.2rem;}
 
+/* chat list markers (right side) */
+.chat-list .cle-markers {grid-row:1;grid-column:5;margin:.3rem 0 0 0;}
+.chat-list .cle-marker {grid-template-rows:2.2rem;}
 
 
 /* ########### MAIN CONTENT VIEWPORT (Chat Pane) ########## */
