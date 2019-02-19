@@ -101,6 +101,9 @@
 /* adjust thread shadow to fit new spacing */
 .message-list-common:not(.chat-style) thread .ts-message::before {top:.2rem;bottom:.2rem;box-shadow:0 0 .4rem -0.1rem rgba(128,128,128,0.4);}
 
+/* make "see more" area taller to prevent overlay issues */
+.message-list-common:not(.chat-style) .ts-see-more-button {height:auto;padding-bottom:1.2rem;}
+
 /* per-thread "reply section" spacing shrinkage */
 .message-list-common:not(.chat-style) .thread-action-reply-message {margin-bottom:0;}
 .message-list-common:not(.chat-style) .ts-reply-message .icons-reply.ts-sym {height:auto;}
