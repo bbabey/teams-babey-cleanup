@@ -167,7 +167,7 @@
 .chat-list .cle-marker {grid-template-rows:2.2rem;}
 
 
-/* ########### MAIN CONTENT VIEWPORT (Chat Pane) ########## */
+/* ########### MAIN CONTENT VIEWPORT (Chat Pane 2019) ########## */
 
 /* ensure message content spans full width of viewport */
 .chat-style .ts-message-list-container,
@@ -221,3 +221,43 @@
 .ts-add-message {padding:1.8rem 0 0 0;margin:0;}
 .ts-add-message .ts-new-message-footer {padding:0;}
 .ts-add-message .ts-border-newcompose:not(.ts-new-message-expand) .ts-new-message-footer {min-height:3.5rem;}
+
+
+
+
+
+/* ########### MAIN CONTENT VIEWPORT (Chat Pane 2021) ########## */
+
+/* ensure message content spans full width of viewport */
+.ui-chat {max-width:none;}
+
+/* align all chats left */
+.ui-chat .ui-chat__item__message {float:left;}
+.ui-chat .ui-chat__item__message > .ui-box {margin-left:0;}
+
+/* border above chat when the author has changed since previous (.eq for new author, .qz for same author) */
+.ui-chat .ui-chat__item--message.eq {border-top:1px solid rgba(127,127,127,0.3);}
+
+/* padding above message, reduced to be compact */
+.ui-chat .ui-chat__item--message {padding-top:0;}
+
+
+/* ---- BEGIN per-message spacing-ish ------ */
+
+/* reduce vertical padding inside bubbles to keep chats more compact */
+.ui-chat .ui-chat__message {padding-top:0.25rem;padding-bottom:0.25rem;}
+
+/* strip background bubble colors */
+.ui-chat .ui-chat__message {background-color:transparent;}
+
+/* self author name visible (class .hw.hu attempts to identify chats which get a timestamp because some time passed) */
+.ui-chat .ui-chat__message.hw.hu .ui-chat__message__author {width:auto;height:auto;clip:auto;position:relative;}
+
+/* timestamp formatting */
+.ui-chat .ui-chat__message__timestamp {opacity:0.60;}
+
+/* ---- END per-message spacing-ish ---- */
+
+
+/* footer input box for chats */
+[data-tid="message-pane-layout"] [data-tid="message-pane-footer"] {max-width:none;margin-top:1.5rem;margin-bottom:0.25rem;}
